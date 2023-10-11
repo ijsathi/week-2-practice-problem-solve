@@ -3,16 +3,14 @@ int main()
 {
     int n;
     scanf("%d", &n);
-    for (int i = 10; i <= 99; i++)
+     int fstDgt = n % 10, lstDgt = n /10;
+    if (fstDgt % lstDgt == 0 || lstDgt % fstDgt == 0)
     {
-        if (n % i == 0 )
-        {
-            printf("YES\n");
-        }
-        else
-        {
-            printf("NO\n");
-        }
+        printf("YES\n");
+    }
+    else
+    {
+        printf("NO\n");
     }
     return 0;
 }
